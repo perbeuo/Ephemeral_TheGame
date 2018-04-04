@@ -6,8 +6,8 @@ public class physicWalk : MonoBehaviour {
 	public static physicWalk instance;
 	
 	//
-	public float speed  = 7f;
-	public float maxSprintSpeed = 7f;
+	public float speed  = 10f;
+	public float maxSprintSpeed = 10f;
 	public float maxWalkSpeed = 4f;
 	public float force     = 8f;
 	public float jumpSpeed = 5f;
@@ -82,7 +82,8 @@ public class physicWalk : MonoBehaviour {
 		{
 			fr += Time.deltaTime;
 
-			if( Input.GetButton( "Sprint" ) )
+			//if( Input.GetButton( "Sprint" ) )
+            if (Input.GetKey(KeyCode.LeftShift))
 			{
 				fr += Time.deltaTime*0.5f;
 			}
@@ -97,7 +98,8 @@ public class physicWalk : MonoBehaviour {
 
 		if( rigidbody.IsSleeping() == true ) rigidbody.WakeUp();
 		
-		if( Input.GetButton( "Sprint" ) )
+		//if( Input.GetButton( "Sprint" ) )
+          if (Input.GetKey(KeyCode.LeftShift))
 		{
 			speed = maxSprintSpeed;
 		}
