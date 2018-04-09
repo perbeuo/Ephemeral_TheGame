@@ -61,9 +61,9 @@ public class physicWalk_MouseLook : MonoBehaviour {
 	
 	void FixedUpdate ()
 	{
-       //Screen.lockCursor = true;//放在update中，每帧调用，强制设置坐标
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;//隐藏鼠标
+       
+       Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;//隐藏鼠标
 		//Smoothed stuff
 		smoothedMouse = Vector2.Lerp( smoothedMouse, new Vector2( Input.GetAxis( "Mouse X" ), Input.GetAxis( "Mouse Y" ) ), 1f/smoothing );
 	
