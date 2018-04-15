@@ -12,8 +12,6 @@ public class inventory : MonoBehaviour {
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
 
         gb = GameObject.Find("Panel");
         gb.SetActive(false);
@@ -23,30 +21,22 @@ public class inventory : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            Debug.Log("手动触发A键Down");
             if (gb.active == true)
             {
                 gb.SetActive(false);
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = true;
-                Debug.Log("锁上");
 
             }
             else if (gb.active == false)
             {
 
                 gb.SetActive(true);
-      
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                Debug.Log("解锁");
+     
             }
 
         }
 
         if (Input.GetKeyUp(KeyCode.Y))
         {
-            Debug.Log("手动触发A键up");
         }
 
 

@@ -7,25 +7,22 @@ using System.Collections;
 public class MouseHighlight : MonoBehaviour {
 
     public GameObject gameCheck;
-
+    public 
+    void Start()
+    {
+       
+    }
     void Update () {
 
-        if(Input.GetMouseButtonDown(0)) {
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);//鼠标的屏幕坐标转化为一条射线
+      //  if(Input.GetMouseButtonDown(0)) {
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);//鼠标的屏幕坐标转化为一条射线
             RaycastHit hit;
-
-            //距离为5
-            //if(Physics.Raycast(ray, out hit, 5)) {
-            //    var hitObj = hit.collider.gameObject;
-            //    Debug.Log(hitObj);
-            //}
-            //无距离限制
             if(Physics.Raycast(ray, out hit)) {
                 var hitObj = hit.collider.gameObject;
                 SetObjectHighlight(hitObj);
                 Debug.Log(hitObj);
             }
-        }
+      //  }
     }
 
     /// <summary>
@@ -44,6 +41,7 @@ public class MouseHighlight : MonoBehaviour {
             RemoveComponent(gameCheck);
             AddComponent(obj);
         }
+      
     }
 
     /// <summary>

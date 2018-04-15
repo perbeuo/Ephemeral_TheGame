@@ -44,6 +44,7 @@ public class physicWalk_MouseLook : MonoBehaviour {
 	
 	void Start()
 	{
+        
 		if( isCamera )
 		{
 			instance = this;
@@ -62,9 +63,10 @@ public class physicWalk_MouseLook : MonoBehaviour {
 	void FixedUpdate ()
 	{
 
-       
-            
-         
+
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
 
         //Smoothed stuff
         smoothedMouse = Vector2.Lerp( smoothedMouse, new Vector2( Input.GetAxis( "Mouse X" ), Input.GetAxis( "Mouse Y" ) ), 1f/smoothing );
@@ -138,7 +140,7 @@ public class physicWalk_MouseLook : MonoBehaviour {
 		wobbleXspeed = _speedX;
 		wobbleYspeed = _speedY;
 	}
-	
+
 }
 
 
