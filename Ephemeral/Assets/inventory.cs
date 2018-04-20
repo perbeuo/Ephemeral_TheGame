@@ -19,11 +19,12 @@ public class inventory : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (gb.active == true)
             {
                 gb.SetActive(false);
+                
 
             }
             else if (gb.active == false)
@@ -35,7 +36,7 @@ public class inventory : MonoBehaviour {
 
         }
 
-        if (Input.GetKeyUp(KeyCode.Y))
+        if (Input.GetKeyUp(KeyCode.Tab))
         {
         }
 
