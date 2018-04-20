@@ -13,7 +13,7 @@ public class inventory : MonoBehaviour {
     void Start()
     {
 
-        gb = GameObject.Find("Panel");
+        gb = GameObject.Find("Canvas");
         gb.SetActive(false);
     }
 

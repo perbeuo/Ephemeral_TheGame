@@ -8,7 +8,7 @@ public class physicWalk_MouseLook : MonoBehaviour {
 	public Transform _camPos;
 	public Vector3 camPosBasePosition;
 	public Transform alternateCamPos;
-	
+
 	public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
 	public RotationAxes axes = RotationAxes.MouseXAndY;
 	public float sensitivity = 15f;
@@ -140,7 +140,7 @@ public class physicWalk_MouseLook : MonoBehaviour {
 		wobbleXspeed = _speedX;
 		wobbleYspeed = _speedY;
 	}
-
+ 
 }
 
 
