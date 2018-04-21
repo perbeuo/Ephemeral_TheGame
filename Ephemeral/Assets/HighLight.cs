@@ -7,9 +7,10 @@ public class HighLight : MonoBehaviour {
 
 	// Use this for initialization
     public GameObject player;
+	public GameObject door;
     public bool isInObject = false;
 	void Start () {
-        player = GameObject.Find("PLAYER");
+        player = GameObject.Find("FPSController");
 	}
     void OnMouseEnter()
     {
@@ -22,11 +23,11 @@ public class HighLight : MonoBehaviour {
     }  
 	// Update is called once per frame
 	void Update () {
-       
         if (isInObject )
         {
-            float distance = (this.gameObject.transform.position - player.gameObject.transform.position).magnitude;
-            if (distance < 2)
+			float distance = (door.transform.position - player.gameObject.transform.position).magnitude;
+			Debug.Log(door.transform.position);
+			if (distance < 2)
             {
                 AddComponent(this.gameObject);
             }

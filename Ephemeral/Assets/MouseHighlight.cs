@@ -7,6 +7,7 @@ using System.Collections;
 public class MouseHighlight : MonoBehaviour {
 
     public GameObject gameCheck;
+	public GameObject targetDoor;
     public 
     void Start()
     {
@@ -14,15 +15,17 @@ public class MouseHighlight : MonoBehaviour {
     }
     void Update () {
 
-      //  if(Input.GetMouseButtonDown(0)) {
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);//鼠标的屏幕坐标转化为一条射线
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit)) {
-                var hitObj = hit.collider.gameObject;
-                SetObjectHighlight(hitObj);
-                Debug.Log(hitObj);
-            }
-      //  }
+		//if (Input.GetMouseButtonDown (0)) {
+			var ray = Camera.main.ScreenPointToRay (Input.mousePosition);//鼠标的屏幕坐标转化为一条射线
+			RaycastHit hit;
+		if (Physics.Raycast (ray, out hit, 3.0f)) {
+			var hitObj = hit.collider.gameObject;
+			SetObjectHighlight (hitObj);
+			//Debug.Log (hitObj);
+		} else {
+			RemoveComponent (targetDoor);
+		}
+		//}
     }
 
     /// <summary>
@@ -31,17 +34,18 @@ public class MouseHighlight : MonoBehaviour {
     /// <param name="obj"></param>
     public void SetObjectHighlight(GameObject obj)
     {
-        if(gameCheck == null) {
-            AddComponent(obj);
-        }
-        else if(gameCheck == obj) {
-            RemoveComponent(obj);
-        }
-        else {
-            RemoveComponent(gameCheck);
-            AddComponent(obj);
-        }
-      
+		if (targetDoor.Equals (obj)) {
+			if(gameCheck == null) {
+				AddComponent(obj);
+			}
+			else if(gameCheck == obj) {
+				//RemoveComponent(obj);
+			}
+			else {
+				RemoveComponent(gameCheck);
+				AddComponent(obj);
+			}
+		}
     }
 
     /// <summary>
