@@ -12,9 +12,11 @@ public class inventory : MonoBehaviour {
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
 
         gb = GameObject.Find("Canvas");
         gb.SetActive(false);
+
     }
 
     void Update()
@@ -24,14 +26,20 @@ public class inventory : MonoBehaviour {
             if (gb.active == true)
             {
                 gb.SetActive(false);
-                
+                Cursor.lockState = CursorLockMode.Locked;
+             
 
             }
             else if (gb.active == false)
             {
 
                 gb.SetActive(true);
-     
+              
+                //we force unlock the cursor if the user disable the cursor locking helper
+                    Cursor.lockState = CursorLockMode.None;
+                   
+                
+
             }
 
         }

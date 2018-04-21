@@ -41,11 +41,12 @@ public class physicWalk_MouseLook : MonoBehaviour {
 	private float inputSensitivity = 0f;
 
 	Quaternion startRotation;
-	
-	void Start()
+   
+
+    void Start()
 	{
-        
-		if( isCamera )
+      
+        if ( isCamera )
 		{
 			instance = this;
 		}
@@ -63,13 +64,11 @@ public class physicWalk_MouseLook : MonoBehaviour {
 	void FixedUpdate ()
 	{
 
+            Cursor.visible = true;
+        
 
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
-
-        //Smoothed stuff
-        smoothedMouse = Vector2.Lerp( smoothedMouse, new Vector2( Input.GetAxis( "Mouse X" ), Input.GetAxis( "Mouse Y" ) ), 1f/smoothing );
+            //Smoothed stuff
+            smoothedMouse = Vector2.Lerp( smoothedMouse, new Vector2( Input.GetAxis( "Mouse X" ), Input.GetAxis( "Mouse Y" ) ), 1f/smoothing );
 	
 		//camholder stuff
 		if( isCamera )
