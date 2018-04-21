@@ -6,8 +6,15 @@ using System.Collections;
 /// </summary>
 public class MouseHighlight : MonoBehaviour {
 
+	public int objnum;
+	public TextMesh tip;
+	public string tipInfo;
     public GameObject gameCheck;
 	public GameObject targetDoor;
+
+	public GameObject pickupObj;	
+	public ItemBox itembox;
+
     public 
     void Start()
     {
@@ -23,7 +30,8 @@ public class MouseHighlight : MonoBehaviour {
 			SetObjectHighlight (hitObj);
 			//Debug.Log (hitObj);
 		} else {
-			RemoveComponent (targetDoor);
+			RemoveComponent (gameCheck);
+			DeleteInfo();
 		}
 		//}
     }
@@ -34,17 +42,18 @@ public class MouseHighlight : MonoBehaviour {
     /// <param name="obj"></param>
     public void SetObjectHighlight(GameObject obj)
     {
-		if (targetDoor.Equals (obj)) {
-			if(gameCheck == null) {
-				AddComponent(obj);
-			}
-			else if(gameCheck == obj) {
+		if (targetDoor.Equals (obj) || pickupObj.Equals (obj)) {
+			if (gameCheck == null) {
+				AddComponent (obj);
+			} else if (gameCheck == obj) {
 				//RemoveComponent(obj);
+			} else {
+				RemoveComponent (gameCheck);
+				AddComponent (obj);
 			}
-			else {
-				RemoveComponent(gameCheck);
-				AddComponent(obj);
-			}
+		}
+		if (pickupObj.Equals (obj)) {
+			PickUpItem (obj);
 		}
     }
 
@@ -76,5 +85,36 @@ public class MouseHighlight : MonoBehaviour {
         }
         gameCheck = obj;
     }
+
+	/// <summary>
+	/// Picks up item.
+	/// </summary>
+	/// <param name="obj">Object.</param>
+	public void PickUpItem(GameObject obj){
+		ShowInfo(tipInfo);
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			Debug.Log(objnum);
+			obj.SetActive(false);
+			itembox.setobjnumber(objnum);
+			//Setnumber.setobjnumber(objnum);
+			DeleteInfo ();
+		}
+	}
+
+	public void ShowInfo(string info)
+	{
+		tip.text = info;
+	}
+
+	public void DeleteInfo()
+	{
+		tip.text = " ";
+	}
+
+	public void Catch(GameObject obj)
+	{
+		obj.transform.position = new Vector2(0, 1000);
+	}
 
 }

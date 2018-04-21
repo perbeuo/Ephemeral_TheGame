@@ -13,7 +13,7 @@ public class Item : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = GameObject.Find("PLAYER");
+        player = GameObject.Find("FPSController");
     }
     void OnMouseEnter()
     {
