@@ -5,16 +5,15 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public int objnum;
+    public ItemBox itembox;
     public TextMesh tip;
     public string tipInfo;
-    public GameObject player;
     public bool isInObject = false;
-    public ItemBox itembox;
     // Use this for initialization
     void Start()
     {
-        player = GameObject.Find("FPSController");
     }
+
     void OnMouseEnter()
     {
         isInObject = true;
@@ -26,49 +25,43 @@ public class Item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (isInObject)
+        RaycastHit hit;
+        if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 1.0f))
         {
-            float distance = (this.gameObject.transform.position - player.gameObject.transform.position).magnitude;
-            if (distance < 2)
-            {
-                ShowInfo();
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    this.gameObject.SetActive(false);
-                    Debug.Log(objnum);
-                    itembox.setobjnumber(objnum);
-                    //Setnumber.setobjnumber(objnum);
-                }
-            }
-            else
-            {
-                DeleteInfo();
-            }
-
+            PickUpItem(this.gameObject);
         }
         else
         {
             DeleteInfo();
         }
-    }
-    public void ShowInfo()
-    {
-        tip.text = tipInfo;
-    }
-    public void DeleteInfo()
-    {
-        tip.text = "";
-    }
-    public void Catch()
-    {
-        transform.position = new Vector2(0, 1000);
-    }
-    public float calculate_distance(float x, float y, float z)
-    {
-        return Mathf.Sqrt(Mathf.Pow(x, 2) + Mathf.Pow(y, 2) + Mathf.Pow(z, 2));
+
+
     }
 
-    
-    
+
+    public void PickUpItem(GameObject obj)
+    {
+        ShowInfo(tipInfo);
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log(objnum);
+            obj.SetActive(false);
+            itembox.setobjnumber(objnum);
+            //Setnumber.setobjnumber(objnum);
+            DeleteInfo();
+        }
+    }
+
+    public void ShowInfo(string info)
+    {
+        tip.text = info;
+    }
+
+    public void DeleteInfo()
+    {
+        tip.text = " ";
+    }
+
+
+
 }
