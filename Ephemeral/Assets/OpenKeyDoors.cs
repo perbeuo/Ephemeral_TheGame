@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OpenKeyDoors : MonoBehaviour {
 	public ItemBox itembox;
+	public int itemNumber;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,7 @@ public class OpenKeyDoors : MonoBehaviour {
 	void TryOpen(GameObject obj){
 		if (Input.GetKeyDown(KeyCode.F))
 		{
-			if (itembox.isExist (1)) {
+			if (itembox.isExist (itemNumber)) {
 				Debug.Log ("u shall pass!");
 			} else {
 				Debug.Log ("u shall not pass!");
