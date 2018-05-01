@@ -41,7 +41,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-
+        //public GameObject door;
+        public Animator dooranimator;
         // Use this for initialization
         private void Start()
         {
@@ -55,6 +56,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            //dooranimator = door.GetComponent<Animator>();
         }
 
 
@@ -81,6 +83,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
         }
 
 
@@ -255,5 +258,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
+        public void Dooropen()
+        {
+       
+            dooranimator.SetBool("status",true);
+        }
+
     }
 }
