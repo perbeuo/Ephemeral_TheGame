@@ -11,6 +11,7 @@ public class HighLight : MonoBehaviour
     RaycastHit hit;
     void Start()
     {
+        
         // player = GameObject.Find("FPSController");
     }
     // Update is called once per frame
@@ -60,5 +61,6 @@ public class HighLight : MonoBehaviour
             obj.AddComponent<SpectrumController>();
         }
     }
+
 
 }
