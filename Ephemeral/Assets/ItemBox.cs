@@ -50,7 +50,14 @@ public class ItemBox : MonoBehaviour {
 
     }
     
-
+	public bool isExist(int objnum){
+		for (int i = 0; i < index; i++) {
+			if (itemnum [i] == objnum) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 
 }

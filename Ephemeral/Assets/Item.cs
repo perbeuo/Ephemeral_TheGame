@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
     public string tipInfo;
     public bool isInObject = false;
     private bool isUse = false;
+
     // Use this for initialization
     void Start()
     {
@@ -33,7 +34,9 @@ public class Item : MonoBehaviour
         }
         else
         {
+
             if (isUse) DeleteInfo();
+
         }
 
 
@@ -42,7 +45,9 @@ public class Item : MonoBehaviour
 
     public void PickUpItem(GameObject obj)
     {
+
         if (!isUse) ShowInfo(tipInfo);
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log(objnum);
@@ -50,6 +55,7 @@ public class Item : MonoBehaviour
             itembox.setobjnumber(objnum);
             //Setnumber.setobjnumber(objnum);
             if (isUse) DeleteInfo();
+
         }
     }
 
@@ -57,12 +63,14 @@ public class Item : MonoBehaviour
     {
         tip.text = info;
         isUse = true;
+
     }
 
     public void DeleteInfo()
     {
         tip.text = " ";
         isUse = false;
+
     }
 
 

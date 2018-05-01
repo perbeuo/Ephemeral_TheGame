@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Office.unity
     guid: e67b9efefb8074129a8c2057103880ad
+  - enabled: 1
+    path: Assets/hospital.unity
+    guid: 488d5332f3b7a324ca849109de44ed32
