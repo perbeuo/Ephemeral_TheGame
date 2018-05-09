@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenKeyDoors : MonoBehaviour {
 	public ItemBox itembox;
 	public int itemNumber;
+	public int toMap;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,7 @@ public class OpenKeyDoors : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		RaycastHit hit;
-		if (Physics.Raycast(MouseHighlight.ray, out hit, 1.0f))
+		if (Physics.Raycast(MouseHighlight.ray, out hit, 1.6f))
 		{
 			TryOpen(this.gameObject);
 		}
@@ -24,7 +25,10 @@ public class OpenKeyDoors : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.F))
 		{
 			if (itembox.isExist (itemNumber)) {
-				Debug.Log ("u shall pass!");
+				if (toMap == 1) {
+					Application.LoadLevel("hospital");
+				}
+				//Debug.Log ("u shall pass!");
 			} else {
 				Debug.Log ("u shall not pass!");
 			}

@@ -9,7 +9,8 @@ public class Item : MonoBehaviour
     public TextMesh tip;
     public string tipInfo;
     public bool isInObject = false;
-	private bool isUse = false;
+    private bool isUse = false;
+
     // Use this for initialization
     void Start()
     {
@@ -27,13 +28,15 @@ public class Item : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 1.0f))
+        if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 1.6f))
         {
             PickUpItem(this.gameObject);
         }
         else
         {
-			if (isUse) DeleteInfo();
+
+            if (isUse) DeleteInfo();
+
         }
 
 
@@ -42,27 +45,32 @@ public class Item : MonoBehaviour
 
     public void PickUpItem(GameObject obj)
     {
-		if (!isUse) ShowInfo(tipInfo);
+
+        if (!isUse) ShowInfo(tipInfo);
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log(objnum);
             obj.SetActive(false);
             itembox.setobjnumber(objnum);
             //Setnumber.setobjnumber(objnum);
-			if (isUse) DeleteInfo();
+            if (isUse) DeleteInfo();
+
         }
     }
 
     public void ShowInfo(string info)
     {
         tip.text = info;
-		isUse = true;
+        isUse = true;
+
     }
 
     public void DeleteInfo()
     {
         tip.text = " ";
-		isUse = false;
+        isUse = false;
+
     }
 
 

@@ -41,8 +41,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-
-        // Use this for initialization
+        
         private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
@@ -81,6 +80,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+
+            }
+            
         }
 
 
@@ -130,7 +134,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            //m_MouseLook.UpdateCursorLock();
+//            m_MouseLook.UpdateCursorLock();
         }
 
 
@@ -255,5 +259,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
+
+
     }
 }
