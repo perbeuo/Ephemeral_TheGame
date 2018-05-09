@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GROUND
   - cube
+  - Shade
   layers:
   - Default
   - TransparentFX

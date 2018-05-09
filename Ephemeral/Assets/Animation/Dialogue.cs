@@ -12,6 +12,8 @@ public class Dialogue : MonoBehaviour {
 	public bool isInObject = false;
 	private bool isUse = false;
 
+	private bool _isShow = false;
+
 	CharacterController cc;
 	private MouseLook[] m_mouseLook;
 
@@ -42,6 +44,13 @@ public class Dialogue : MonoBehaviour {
 				Cursor.lockState = CursorLockMode.None;
 				Cursor.lockState = CursorLockMode.Confined;
 				lines.text = "Hello!";
+//				if (!_isShow) {
+//					FadeEffect.showCover ();
+//					_isShow = true;
+//				} else {
+//					FadeEffect.cancelCover ();
+//					_isShow = false;
+//				}
 			}
 		}
 	}
