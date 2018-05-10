@@ -29,7 +29,7 @@ public class Item : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 1.6f))
+        if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 3.0f))
         {
 				PickUpItem(this.gameObject);
         }
