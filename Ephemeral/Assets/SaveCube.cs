@@ -15,8 +15,7 @@ public class SaveCube : MonoBehaviour
     {//保存Cube的部分数据，这里保存Cube的位置信息
 
         GameObject cube = GameObject.Find("FPSController");//获得人物对象
-        GameObject cube1 = GameObject.Find("Cube");//获得物体对象
-        GameObject cube2 = GameObject.Find("Cube (1)");//获得物体对象
+
 
         GameObject key1 = GameObject.Find("key");//获得物体对象
         GameObject key2 = GameObject.Find("key (1)");//获得物体对象
@@ -31,22 +30,6 @@ public class SaveCube : MonoBehaviour
 
         g.gameData.s.cubePosion = cube.transform.position;//保存Cube的位置
 
-
-        Debug.Log(cube1);
-
-        if (cube1!=null)
-        {
-            g.gameData.s.i = 1;
-            Debug.Log(g.gameData.s.i);
-        }
-        else
-        {
-            g.gameData.s.i = 0;
-            Debug.Log(g.gameData.s.i);
-        }
-
-        if (cube2 != null){g.gameData.s.i1 = 1;}
-        else{g.gameData.s.i1 = 0;}
 
         if (key1 != null) { g.gameData.s.key1 = 1; }
         else { g.gameData.s.key1 = 0; }
@@ -68,8 +51,6 @@ public class SaveCube : MonoBehaviour
     {//场景开始时加载游戏对象
 
         GameObject cube = GameObject.Find("FPSController");//获得人物对象
-        GameObject cube1 = GameObject.Find("Cube");//获得物体对象
-        GameObject cube2 = GameObject.Find("Cube (1)");//获得物体对象
 
         GameObject key1 = GameObject.Find("key");//获得物体对象
         GameObject key2 = GameObject.Find("key (1)");//获得物体对象
@@ -79,7 +60,7 @@ public class SaveCube : MonoBehaviour
         GameObject se2 = GameObject.Find("select（1）");//获得人物对象
         GameObject se3 = GameObject.Find("select（2）");//获得人物对象
 
-        GameObject door = GameObject.Find("doors_B");//获得人物对象
+        GameObject door = GameObject.Find("doors_B1");//获得人物对象
 
 
         GameObject gameDataManager = GameObject.Find("GameDataManager");//获得GameDataManager(游戏控制器）对象
@@ -94,13 +75,7 @@ public class SaveCube : MonoBehaviour
                 Vector3 v2 = new Vector3(0, -90, 0);
                 door.transform.Rotate(v2);
                 sel.SetActive(false);
-            }
-
-
-            if (g.gameData.s.i!=1)//如果存档时物体不存在.读档是设置消失
-            {
-                cube1.SetActive(false);
-                itembox.setobjnumber(1);
+                Debug.Log("开门aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
             }
 
             if (g.gameData.s.key1 != 1)//如果存档时物体不存在.读档是设置消失
