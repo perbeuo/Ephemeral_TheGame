@@ -32,12 +32,52 @@ public class ItemBox : MonoBehaviour {
         {
 
             case 1:
-                aa = (Texture2D)Resources.Load("end") as Texture2D;
+                aa = (Texture2D)Resources.Load("key1") as Texture2D;
                 kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
                 items[index].sprite = kk;
 
                 break;
             case 2:
+                aa = (Texture2D)Resources.Load("key2") as Texture2D;
+                kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
+                items[index].sprite = kk;
+                break;
+            case 3:
+                aa = (Texture2D)Resources.Load("key3") as Texture2D;
+                kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
+                items[index].sprite = kk;
+                break;
+            case 4:
+                aa = (Texture2D)Resources.Load("bag") as Texture2D;
+                kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
+                items[index].sprite = kk;
+                break;
+            case 5:
+                aa = (Texture2D)Resources.Load("door_2") as Texture2D;
+                kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
+                items[index].sprite = kk;
+                break;
+            case 6:
+                aa = (Texture2D)Resources.Load("door_2") as Texture2D;
+                kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
+                items[index].sprite = kk;
+                break;
+            case 7:
+                aa = (Texture2D)Resources.Load("door_2") as Texture2D;
+                kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
+                items[index].sprite = kk;
+                break;
+            case 8:
+                aa = (Texture2D)Resources.Load("door_2") as Texture2D;
+                kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
+                items[index].sprite = kk;
+                break;
+            case 9:
+                aa = (Texture2D)Resources.Load("door_2") as Texture2D;
+                kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
+                items[index].sprite = kk;
+                break;
+            case 10:
                 aa = (Texture2D)Resources.Load("door_2") as Texture2D;
                 kk = Sprite.Create(aa, new Rect(0, 0, aa.width, aa.height), new Vector2(0.5f, 0.5f));
                 items[index].sprite = kk;
