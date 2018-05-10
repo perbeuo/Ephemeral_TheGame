@@ -8,7 +8,7 @@ public class controllor : MonoBehaviour {
     public TextMesh tip;
     public string tipInfo = "E";
     private bool isPrss = false;
-    static bool isStart = false;
+    public static bool isStart = false;
 	// Use this for initialization
 	void Start () {
 		

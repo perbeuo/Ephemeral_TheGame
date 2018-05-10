@@ -43,7 +43,7 @@ public class Dialogue : MonoBehaviour {
 		{
 			if (Input.GetKeyDown (KeyCode.E)) {
 //				count = 0;
-				if (dialogue_num == 1 && !itembox.isExist(2) && !itembox.isExist(3)){
+				if (dialogue_num == 1 && !itembox.isExist(4) && !itembox.isExist(3)){
 					gb.SetActive (true);
 					cc.enabled = false;
 					cc.GetComponent<FirstPersonController>().enabled = false;
@@ -51,7 +51,7 @@ public class Dialogue : MonoBehaviour {
 					Cursor.lockState = CursorLockMode.Confined;
 					lines.text = "可恶，门锁住了!";
 					_current_dlg = 1;
-				}else if (dialogue_num == 1 && itembox.isExist(3) && !itembox.isExist(2)){
+				}else if (dialogue_num == 1 && itembox.isExist(3) && !itembox.isExist(4)){
 					gb.SetActive (true);
 					cc.enabled = false;
 					cc.GetComponent<FirstPersonController>().enabled = false;
@@ -59,7 +59,7 @@ public class Dialogue : MonoBehaviour {
 					Cursor.lockState = CursorLockMode.Confined;
 					lines.text = "应该是这把钥匙吧。";
 					_current_dlg = 1.1f;
-				}else if (dialogue_num == 1 && itembox.isExist(2)){
+				}else if (dialogue_num == 1 && itembox.isExist(4)){
 					gb.SetActive (true);
 					cc.enabled = false;
 					cc.GetComponent<FirstPersonController>().enabled = false;
@@ -84,6 +84,22 @@ public class Dialogue : MonoBehaviour {
 					Cursor.lockState = CursorLockMode.Confined;
 					lines.text = "就是它！赶紧用这些工具去试试开锁！";
 					_current_dlg = 3.1f;
+				}else if (dialogue_num == 4){
+					gb.SetActive (true);
+					cc.enabled = false;
+					cc.GetComponent<FirstPersonController>().enabled = false;
+					Cursor.lockState = CursorLockMode.None;
+					Cursor.lockState = CursorLockMode.Confined;
+					lines.text = "这张纸...";
+					_current_dlg = 4;
+				}else if (dialogue_num == 5){
+					gb.SetActive (true);
+					cc.enabled = false;
+					cc.GetComponent<FirstPersonController>().enabled = false;
+					Cursor.lockState = CursorLockMode.None;
+					Cursor.lockState = CursorLockMode.Confined;
+					lines.text = "这是医院的地图...";
+					_current_dlg = 5;
 				}
 				else if (dialogue_num == 667){
 					gb.SetActive (true);
@@ -183,7 +199,50 @@ public class Dialogue : MonoBehaviour {
 				cc.enabled = true;
 				cc.GetComponent<FirstPersonController> ().enabled = true;
 			} 
-		} else if (_current_dlg == 667 && this.name.Equals("test")) {
+		} else if (_current_dlg == 4f && this.name.Equals("hint_paper")) {
+			if (count == 0) {
+				lines.text = "这...好像是我的病例？";
+				count++;
+			} else if (count == 1) {
+				lines.text = "我...好像以前来过这里...";
+				count++;
+			} else if (count == 2) {
+				lines.text = "那次我加班太久，昏倒之后来到的好像就是这家医院？";
+				count++;
+			} else if (count == 3) {
+				lines.text = "现在它怎么变得这么破败？";
+				count++;
+			} else if (count == 4) {
+				lines.text = "旁边好像有地图，我先看一看。";
+				count++;
+			} else if (count == 5) {
+				count = 0;
+				_current_dlg = 0;
+				gb.SetActive (false);
+				cc.enabled = true;
+				cc.GetComponent<FirstPersonController> ().enabled = true;
+			}
+		}else if (_current_dlg == 5f && this.name.Equals("map_1")) {
+			if (count == 0) {
+				lines.text = "但是这里只有半张...";
+				count++;
+			} else if (count == 1) {
+				lines.text = "嗯...这半张没有关键地点啊，要去找到另外一半。";
+				count++;
+			} else if (count == 2) {
+				lines.text = "先在一楼看看吧。";
+				count++;
+			} else if (count == 3) {
+				lines.text = "（为什么这么奇怪的事情会发生在我身上？）";
+				count++;
+			} else if (count == 4) {
+				count = 0;
+				_current_dlg = 0;
+				gb.SetActive (false);
+				cc.enabled = true;
+				cc.GetComponent<FirstPersonController> ().enabled = true;
+			}
+		}else if (_current_dlg == 667 && this.name.Equals("test")) {
 			if (count == 0) {
 				lines.text = "This is Ephemeral!";
 				count++;
