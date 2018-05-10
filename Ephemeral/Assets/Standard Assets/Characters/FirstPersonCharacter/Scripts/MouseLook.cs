@@ -88,7 +88,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     temp = 1;
                 }
             }
-
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                if (temp == 1)
+                {
+                    m_cursorIsLocked = false;
+                    temp = 0;
+                }
+                else
+                {
+                    m_cursorIsLocked = true;
+                    temp = 1;
+                }
+            }
             else if (Input.GetKeyUp(KeyCode.Escape))
             {
                 m_cursorIsLocked = false;
