@@ -19,17 +19,17 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0ee98efd5d60b974bb09fc41b2b1a767, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1e059f8566f7c7e4c8e51cf9aa265c49, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0ee98efd5d60b974bb09fc41b2b1a767, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _RimPower: 3
-    - _Shininess: 0.078125
+    - _RimPower: 2.62
+    - _Shininess: 0.03
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 0.09256055, g: 0.10726643, b: 0.11764705, a: 0}
-    - _SpecColor: {r: 0.11764705, g: 0.11764705, b: 0.11764705, a: 1}
+    - _SpecColor: {r: 0.11764705, g: 0.11764705, b: 0.11764705, a: 0.641}
