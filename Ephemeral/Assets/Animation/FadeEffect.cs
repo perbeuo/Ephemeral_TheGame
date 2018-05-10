@@ -42,12 +42,12 @@ public class FadeEffect : MonoBehaviour {
 	}
 
 	public static void showCover(){
-		Debug.Log ("to black speed" + _speed);
+//		Debug.Log ("to black speed" + _speed);
 		_isHide = true;
 	}
 
 	public static void cancelCover(){
-		Debug.Log ("to trans speed "+_speed);
+//		Debug.Log ("to trans speed "+_speed);
 		_isShow = true;
 	}
 

@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
     public string tipInfo;
     public bool isInObject = false;
     private bool isUse = false;
+	public bool withDlg = false;
 
     // Use this for initialization
     void Start()
@@ -30,7 +31,7 @@ public class Item : MonoBehaviour
         RaycastHit hit;
         if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 3.0f))
         {
-            PickUpItem(this.gameObject);
+				PickUpItem(this.gameObject);
         }
         else
         {
@@ -48,7 +49,7 @@ public class Item : MonoBehaviour
 
         if (!isUse) ShowInfo(tipInfo);
 
-        if (Input.GetKeyDown(KeyCode.F))
+		if (Input.GetKeyDown(KeyCode.E) && !withDlg)
         {
             Debug.Log(objnum);
             obj.SetActive(false);
