@@ -6,8 +6,9 @@ public class controllor : MonoBehaviour {
     public Animator animator;
     private  bool isInObject = false;
     public TextMesh tip;
-    public string tipInfo = "G";
+    public string tipInfo = "E";
     private bool isPrss = false;
+    static bool isStart = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -27,18 +28,27 @@ public class controllor : MonoBehaviour {
         if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 1.0f))
         {
             ShowInfo(tipInfo);
-            if (!isPrss && Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                animator.SetBool("status", true);
-                isPrss = true;
+                if (isStart == true)
+                {
+
+                    if (!isPrss)
+                    {
+                        animator.SetBool("status", true);
+                        isPrss = true;
+                    }
+                    else if (isPrss && Input.GetKeyDown(KeyCode.E))
+                    {
+                        animator.SetBool("status", false);
+                        isPrss = false;
+                    }
+                }
+                else
+                {
+                    Debug.Log("提示对白");
+                }
             }
-            else if (isPrss && Input.GetKeyDown(KeyCode.G))
-            {
-                animator.SetBool("status", false );
-                isPrss = false;
-            }
-        }
-        else {
            
         }
 	}

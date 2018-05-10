@@ -26,7 +26,7 @@ public class HighLight : MonoBehaviour
     void Update()
     {
 
-        if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 1.0f))
+        if (isInObject && Physics.Raycast(MouseHighlight.ray, out hit, 3.0f))
         {
             AddComponent(this.gameObject);
 
