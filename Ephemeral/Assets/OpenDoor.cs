@@ -10,8 +10,8 @@ public class OpenDoor : MonoBehaviour {
     RaycastHit hit;
 	// Use this for initialization
 	void Start () {
-		
-	}
+       
+    }
 
     void OnMouseEnter()
     {
@@ -34,6 +34,11 @@ public class OpenDoor : MonoBehaviour {
                 {
                     this.transform.Rotate(v2);
                     Debug.Log("开门");
+                    if (objnum == 1)
+                    {
+                        GameObject sel = GameObject.Find("select");//获得判定对象
+                        sel.SetActive(false);
+                    }
                 }
                 else
                 {
