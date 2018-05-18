@@ -100,6 +100,14 @@ public class Dialogue : MonoBehaviour {
 					Cursor.lockState = CursorLockMode.Confined;
 					lines.text = "这是医院的地图...";
 					_current_dlg = 5;
+				}else if (dialogue_num == 6){
+					gb.SetActive (true);
+					cc.enabled = false;
+					cc.GetComponent<FirstPersonController>().enabled = false;
+					Cursor.lockState = CursorLockMode.None;
+					Cursor.lockState = CursorLockMode.Confined;
+					lines.text = "这是另外半张地图！";
+					_current_dlg = 6;
 				}
 				else if (dialogue_num == 667){
 					gb.SetActive (true);
@@ -234,6 +242,26 @@ public class Dialogue : MonoBehaviour {
 				count++;
 			} else if (count == 3) {
 				lines.text = "（为什么这么奇怪的事情会发生在我身上？）";
+				count++;
+			} else if (count == 4) {
+				count = 0;
+				_current_dlg = 0;
+				gb.SetActive (false);
+				cc.enabled = true;
+				cc.GetComponent<FirstPersonController> ().enabled = true;
+			}
+		}else if (_current_dlg == 6f && this.name.Equals("map_2")) {
+			if (count == 0) {
+				lines.text = "我看看...";
+				count++;
+			} else if (count == 1) {
+				lines.text = "嗯...跟上一张结合起来看的话...";
+				count++;
+			} else if (count == 2) {
+				lines.text = "（仔细查看）";
+				count++;
+			} else if (count == 3) {
+				lines.text = "看来想离开这里要通过电梯...还是先去查看一下吧。";
 				count++;
 			} else if (count == 4) {
 				count = 0;
