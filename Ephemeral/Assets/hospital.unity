@@ -44888,6 +44888,8 @@ GameObject:
   - component: {fileID: 1706989711}
   - component: {fileID: 1706989710}
   - component: {fileID: 1706989709}
+  - component: {fileID: 1706989713}
+  - component: {fileID: 1706989714}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -44961,6 +44963,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 73.357, z: 0}
+--- !u!114 &1706989713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706989708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03f8e14bd9f545f59ee5b7dcb821e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: map_2
+  lines: {fileID: 1689492748}
+  gb: {fileID: 63434266}
+  player: {fileID: 1804190220}
+  isInObject: 0
+  dialogue_num: 6
+  itembox: {fileID: 0}
+--- !u!114 &1706989714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706989708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e46462de6b347d40ae9c64819924df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInObject: 0
 --- !u!4 &1708732237 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a090abaef3e8509418758c1b5c1e165d, type: 2}
@@ -49817,6 +49849,7 @@ GameObject:
   - component: {fileID: 1878936724}
   - component: {fileID: 1878936723}
   - component: {fileID: 1878936727}
+  - component: {fileID: 1878936728}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -49908,6 +49941,18 @@ MonoBehaviour:
   isInObject: 0
   dialogue_num: 4
   itembox: {fileID: 901772823}
+--- !u!114 &1878936728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878936722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e46462de6b347d40ae9c64819924df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInObject: 0
 --- !u!1001 &1879743914
 Prefab:
   m_ObjectHideFlags: 0
@@ -53072,7 +53117,7 @@ Prefab:
     - target: {fileID: 114148903974043692, guid: 208928dd9201c4938b139b05f8236ed2,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224761563712553958, guid: 208928dd9201c4938b139b05f8236ed2,
         type: 2}
@@ -53224,6 +53269,31 @@ Prefab:
       propertyPath: itembox
       value: 
       objectReference: {fileID: 901772823}
+    - target: {fileID: 114148903974043692, guid: 208928dd9201c4938b139b05f8236ed2,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114148903974043692, guid: 208928dd9201c4938b139b05f8236ed2,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114148903974043692, guid: 208928dd9201c4938b139b05f8236ed2,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1706989713}
+    - target: {fileID: 114148903974043692, guid: 208928dd9201c4938b139b05f8236ed2,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ShowLines
+      objectReference: {fileID: 0}
+    - target: {fileID: 114148903974043692, guid: 208928dd9201c4938b139b05f8236ed2,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 208928dd9201c4938b139b05f8236ed2, type: 2}
   m_IsPrefabParent: 0

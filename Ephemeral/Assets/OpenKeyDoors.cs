@@ -35,7 +35,12 @@ public class OpenKeyDoors : MonoBehaviour {
 
 	public static void LoadScene(int num){
 		if (num == 1) {
-			Application.LoadLevel("hospital");
+//			FadeEffect.changeSpeed (.1f);
+//			FadeEffect.showCover ();
+			Application.LoadLevel ("hospital");
+//			FadeEffect.cancelCover();
+		} else if (num == 2) {
+			Debug.Log ("to end");
 		}
 	}
 }
