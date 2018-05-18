@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class IsTrigger : MonoBehaviour {
@@ -18,6 +19,7 @@ public class IsTrigger : MonoBehaviour {
     void OnTriggerEnter(Collider collider)
     {
         this.gameObject.SetActive(false);
+        SceneManager.LoadScene("Office2");
         Debug.Log("碰撞啦！");
     }
 }
