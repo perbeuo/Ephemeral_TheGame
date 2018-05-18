@@ -10199,7 +10199,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: cbd7520faa16946479f7fa9524c74ccd, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: cbd7520faa16946479f7fa9524c74ccd, type: 3}
       propertyPath: m_LocalScale.x
@@ -11119,7 +11119,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: cbd7520faa16946479f7fa9524c74ccd, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: cbd7520faa16946479f7fa9524c74ccd, type: 3}
       propertyPath: m_LocalScale.x
@@ -18639,7 +18639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objnum: 2
   itembox: {fileID: 901772823}
-  tip: {fileID: 704958867}
+  tip: {fileID: 0}
   tipInfo: F
   isInObject: 0
   withDlg: 0
@@ -20314,7 +20314,7 @@ RectTransform:
   m_LocalScale: {x: 0.9992645, y: 0.9992641, z: 0.9992641}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24546,7 +24546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objnum: 2
   itembox: {fileID: 901772823}
-  tip: {fileID: 704958867}
+  tip: {fileID: 0}
   tipInfo: F
   isInObject: 0
   withDlg: 0
@@ -41678,7 +41678,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: cbd7520faa16946479f7fa9524c74ccd, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: cbd7520faa16946479f7fa9524c74ccd, type: 3}
       propertyPath: m_LocalScale.x
@@ -45007,67 +45007,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e66d32d4808240478c355390ffe5670, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1714163220
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -30.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 114478291361412046, guid: f2c060dfe9fe2c548892d5824ae02db7,
-        type: 2}
-      propertyPath: door
-      value: 
-      objectReference: {fileID: 1791015374}
-    - target: {fileID: 114478291361412046, guid: f2c060dfe9fe2c548892d5824ae02db7,
-        type: 2}
-      propertyPath: dooranimator
-      value: 
-      objectReference: {fileID: 1791015379}
-    - target: {fileID: 114478291361412046, guid: f2c060dfe9fe2c548892d5824ae02db7,
-        type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 745551101}
-    - target: {fileID: 4111920252699858, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f2c060dfe9fe2c548892d5824ae02db7, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &1714283691 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9e66d32d4808240478c355390ffe5670, type: 2}
@@ -47060,7 +46999,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1788338881 stripped
 Transform:
@@ -53169,7 +53108,7 @@ Prefab:
     - target: {fileID: 224761563712553958, guid: 208928dd9201c4938b139b05f8236ed2,
         type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 224761563712553958, guid: 208928dd9201c4938b139b05f8236ed2,
         type: 2}
@@ -53271,6 +53210,16 @@ Prefab:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114705990612014558, guid: 208928dd9201c4938b139b05f8236ed2,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1804190220}
+    - target: {fileID: 114705990612014558, guid: 208928dd9201c4938b139b05f8236ed2,
+        type: 2}
+      propertyPath: itembox
+      value: 
+      objectReference: {fileID: 901772823}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 208928dd9201c4938b139b05f8236ed2, type: 2}
   m_IsPrefabParent: 0
@@ -53484,7 +53433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objnum: 2
   itembox: {fileID: 901772823}
-  tip: {fileID: 704958867}
+  tip: {fileID: 0}
   tipInfo: F
   isInObject: 0
   withDlg: 0
