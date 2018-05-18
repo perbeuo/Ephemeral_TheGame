@@ -108,6 +108,14 @@ public class Dialogue : MonoBehaviour {
 					Cursor.lockState = CursorLockMode.Confined;
 					lines.text = "这是另外半张地图！";
 					_current_dlg = 6;
+				}else if (dialogue_num == 7){
+					gb.SetActive (true);
+					cc.enabled = false;
+					cc.GetComponent<FirstPersonController>().enabled = false;
+					Cursor.lockState = CursorLockMode.None;
+					Cursor.lockState = CursorLockMode.Confined;
+					lines.text = "这次...门没锁？";
+					_current_dlg = 7;
 				}
 				else if (dialogue_num == 667){
 					gb.SetActive (true);
@@ -264,6 +272,20 @@ public class Dialogue : MonoBehaviour {
 				lines.text = "看来想离开这里要通过电梯...还是先去查看一下吧。";
 				count++;
 			} else if (count == 4) {
+				count = 0;
+				_current_dlg = 0;
+				gb.SetActive (false);
+				cc.enabled = true;
+				cc.GetComponent<FirstPersonController> ().enabled = true;
+			}
+		}else if (_current_dlg == 7f && this.name.Equals("office_door2")) {
+			if (count == 0) {
+				lines.text = "门后的会是什么？";
+				count++;
+			} else if (count == 1) {
+				lines.text = "可恶...头又开始晕了...";
+				count++;
+			} else if (count == 2) {
 				count = 0;
 				_current_dlg = 0;
 				gb.SetActive (false);
