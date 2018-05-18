@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class startgenerator : MonoBehaviour {
      RaycastHit hit;
+     private bool isPres = false;
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
+
+    void OnMouseEnter()
+    {
+        isPres = true;
+    }
+
 	// Update is called once per frame
 	void Update () {
-        if (Physics.Raycast(MouseHighlight.ray, out hit, 1.0f) && Input.GetKeyDown(KeyCode.E))
+        if (Physics.Raycast(MouseHighlight.ray, out hit, 5.0f)&& isPres == true)
         {
-            controllor.isStart = true;
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                controllor.isStart = true;
+                
+            }
+            
         }
-		
+       
 	}
 }
