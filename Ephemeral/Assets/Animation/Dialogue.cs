@@ -291,6 +291,7 @@ public class Dialogue : MonoBehaviour {
 				gb.SetActive (false);
 				cc.enabled = true;
 				cc.GetComponent<FirstPersonController> ().enabled = true;
+                OpenKeyDoors.LoadScene(2);
 			}
 		}else if (_current_dlg == 667 && this.name.Equals("test")) {
 			if (count == 0) {

@@ -40,7 +40,7 @@ public class OpenKeyDoors : MonoBehaviour {
 			Application.LoadLevel ("hospital");
 //			FadeEffect.cancelCover();
 		} else if (num == 2) {
-			Debug.Log ("to end");
+            Application.LoadLevel("finally scene");
 		}
 	}
 }
